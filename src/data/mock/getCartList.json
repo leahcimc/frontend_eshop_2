@@ -1,0 +1,26 @@
+[
+    {
+        "pid": 1,
+        "name": "MSI 微星 Katana 15 B13VFK RTX4060 電競手提電腦",
+        "price": 10599.00,
+        "stock": 100,
+        "image_url": "https://api.fortress.com.hk/medias/Katana-15-B13VFK-i9-13012473.jpg?context=bWFzdGVyfGZyb250em9vbXwxNDc0NTB8aW1hZ2UvanBlZ3xabkp2Ym5SNmIyOXRMMmd4T1M5b1pUVXZNVEF6TnpFMk16TTNNRGt3T0RZdWFuQm58ZjMxZWRiOTIwNGM4NmY0OGUwZTYwNjgzMGM5OWU3YWM4ZDc1NGU1YzhkMzVjNTA0MTliMDYwNzdjMWY0YTM4Yw",
+        "cart_quantity": 1
+    },
+    {
+        "pid": 2,
+        "name": "MSI 微星 Katana GF63 12VE RTX4050 電競手提電腦",
+        "price": 6599.90,
+        "stock": 100,
+        "image_url": "https://api.fortress.com.hk/medias/Katana-GF63-12VE-i5-13004035.jpg?context=bWFzdGVyfGZyb250em9vbXwxNTQzNjZ8aW1hZ2UvanBlZ3xabkp2Ym5SNmIyOXRMMmhpWkM5b05UZ3ZNVEF6TlRJMk1USTJOekUxTVRndWFuQm58NTJmMjFhNzQ4ZTg0MDBkMzRmYjNkODAzNDJkZDIzYTAzM2UxMmI4NmZkNmNlMzkyNDhiMWNmNDE1ZjcyMDM4Yg",
+        "cart_quantity": 1
+    },
+    {
+        "pid": 3,
+        "name": "MSI 微星 Vector GP78HX 13VG RTX4070 電競手提電腦",
+        "price": 19999.00,
+        "stock": 100,
+        "image_url": "https://api.fortress.com.hk/medias/zoom-FRONT-13148063.jpg?context=bWFzdGVyfGZ0cmhrL2ltYWdlc3w2NTQ1OTV8aW1hZ2UvcG5nfGFERTVMMmd4TUM4eE1ESTBPREEwTXprMU5ESXdOaTlHVkZKSVN5MHhNekUwT0RBMk15MUdVazlPVkM1d2JtY3w3YzU5ZGUzZmQxNjdmNGRhNDY0MjA4ODQ0OGI0Mjg3MGVkYWM2MDYzNTYwNjc3MTIzYTEwY2I0NzhiOGU1MmIx",
+        "cart_quantity": 1
+    }
+]

@@ -1,0 +1,138 @@
+* {
+    font-family: "Lucida Console", Courier, monospace;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-width: 375px;
+    color: rgba(155, 252, 117, 0.847)
+}
+
+body {
+    color: azure;
+    position: absolute;
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: black;
+    width: 100%;
+    margin: inherit;
+    padding: inherit;
+    min-width: 375px;
+    backdrop-filter: blur(6px);
+}
+
+.backGlassBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 48px rgba(255, 255, 255, 0.2);
+    border-radius: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(2px); */
+    padding: 24px;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+    min-height: 80vh;
+}
+
+.inputBox::placeholder {
+    color: rgba(206, 206, 206, 0.847);
+    font-weight: 200;
+}
+
+.inputBox:focus {
+    background-color: transparent;
+    color: rgba(155, 252, 117, 0.847)
+}
+
+.inputBox:focus::after {
+    color: red;
+}
+
+.itemButton {
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.itemButton:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255,255,255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.fontAwesomeButton:hover {
+    background-color: rgba(224, 44, 20, 0.7);
+}
+
+.detailPic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+    border-radius: 30px;
+    box-shadow: 0 25px 45px rgba(72, 193, 226, 0.758);
+}
+
+.productCard {
+    transition: 0.1s ease;
+    backdrop-filter: blur(2px);
+    color: azure;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.productCard:hover {
+    transform: scale(1.05);
+    background-color: rgba(255,255,255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px azure;
+}
+
+.popUpBox {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 48px rgba(255, 255, 255, 0.2);
+    border-radius: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.confirmBtn {
+    border-color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    width: 30vw;
+    font-size: 1.75rem;
+    background: rgba(155, 252, 117, 0.6);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.confirmBtn:hover {
+    background: rgba(155, 252, 117, 0.8);
+    color: rgba(255, 255, 255, 1);
+}
+
+.cancelBtn {
+    border-color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    width: 30vw;
+    font-size: 1.75rem;
+    background: rgba(224, 44, 20, 0.4);
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 4vw;
+}
+
+.cancelBtn:hover {
+    background: rgba(224, 44, 20, 0.8);
+    color: rgba(255, 255, 255, 1);
+}

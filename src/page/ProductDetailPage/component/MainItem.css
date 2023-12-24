@@ -1,0 +1,19 @@
+.captionBox {
+    background: none;
+    width: 50%;
+    color: #FFFFFF;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 576px){
+    .detailPic {
+        margin-left: 9vw;
+        margin-bottom: 24px;
+        width: 80%;
+    }
+
+    .captionBox {
+        width: 100%;
+    }
+}
