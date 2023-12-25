@@ -102,7 +102,7 @@ export const finishTransaction = async (tid: string) => {
         }
 
         const config = { headers: { Authorization: `Bearer ${accessToken}` } };
-        const response = await axios.patch(
+        await axios.patch(
             `${baseUrl}/transaction/${tid}/finish`,
             null,
             config
@@ -123,7 +123,7 @@ export const deleteTransaction = async (tid: string) => {
         }
 
         const config = { headers: { Authorization: `Bearer ${accessToken}` } };
-        const response = await axios.delete(
+        await axios.delete(
             `${baseUrl}/transaction/${tid}`,
             config
         );

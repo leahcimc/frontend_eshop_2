@@ -1,6 +1,5 @@
 import '../../common/commonStyle.css';
 import './component/checkout.css';
-import TopNavBar from '../../common/component/TopNavBar';
 import { LoginUserContext } from '../../App';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
