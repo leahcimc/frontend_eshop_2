@@ -6,10 +6,12 @@ import ProductListingPage from './page/ProductListingPage'
 import ProductDetailPage from './page/ProductDetailPage'
 import ShoppingCartPage from './page/ShoppingCartPage'
 import TransactionPage from './page/TransactionPage'
-import CheckOutPage from './page/TransactionPage'
+import CheckOutPage from './page/CheckOutPage'
 import ThankYouPage from './page/ThankYouPage'
 import LoginPage from './page/LoginPage'
 import ErrorPage from './page/ErrorPage'
+import AboutPage from './page/AboutPage'
+import HomePage from './page/HomePage'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { createContext, useEffect, useState } from 'react'
 import { UserData } from './data/dto/UserDto'
@@ -28,10 +30,18 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <HomePage />
+    },
+    {
+      path: "/about",
+      element: <AboutPage />
+    },
+    {
+      path: "/product",
       element: <ProductListingPage />
     },
     {
-      path: "/:searchWord",
+      path: "/product/:searchWord",
       element: <ProductListingPage />
     },
     {
@@ -43,7 +53,7 @@ function App() {
       element: <ErrorPage />
     },
     {
-      path: "/product/:productId",
+      path: "/product/detail/:productId",
       element: <ProductDetailPage />
     },
     {
@@ -63,7 +73,7 @@ function App() {
       element: <TransactionListingPage />
     },
     {
-      path: "/checkout",
+      path: "/checkout/:transactionId",
       element: <CheckOutPage />
     },
     {

@@ -135,8 +135,7 @@ export default function CheckOutPage() {
             setIsPaying(true);
             await TransactionApi.payTransaction(tid);
 
-            await TransactionApi.finishTransaction(tid);
-            navigate("/thankyou");
+            navigate(`/checkout/${tid}`);
             setIsPaying(false);
         } catch (e) {
             navigate("/error");
@@ -158,6 +157,8 @@ export default function CheckOutPage() {
         if (loginUser) {
             transactionId &&
                 fetch1BillData(transactionId)
+
+            document.title = `帳單'${transactionId}'的資料`;
 
         } else if (loginUser === null) {
             navigate("/login");

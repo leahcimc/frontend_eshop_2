@@ -26,6 +26,7 @@ export default function TransactionListingPage() {
     }
 
     useEffect(() => {
+        document.title = '我的帳單';
         if (loginUser) {
             fetchAllBillData();
         } else if (loginUser === null) {

@@ -22,7 +22,7 @@ body {
     margin: inherit;
     padding: inherit;
     min-width: 375px;
-    backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
 }
 
 .backGlassBox {
@@ -43,6 +43,7 @@ body {
     margin-right: auto;
     width: 95vw;
     min-height: 80vh;
+    backdrop-filter: blur(6px);
 }
 
 .inputBox::placeholder {
@@ -100,7 +101,7 @@ body {
 }
 
 .popUpBox {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 24px 48px rgba(255, 255, 255, 0.2);
     border-radius: 36px;
     border: 2px solid rgba(255, 255, 255, 0.5);

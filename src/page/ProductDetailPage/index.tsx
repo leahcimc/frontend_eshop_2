@@ -27,6 +27,7 @@ export default function ProductDetailPage() {
     const fetch1ProductData = async (pid: string) => {
         const resultData = await ProductApi.getOneProduct(pid);
         setResult(resultData);
+        document.title = resultData.name;
     }
 
     useEffect(() => {

@@ -81,7 +81,7 @@ export const payTransaction = async (tid: string) => {
         }
 
         const config = { headers: { Authorization: `Bearer ${accessToken}` } };
-        const response = await axios.patch(
+        await axios.patch(
             `${baseUrl}/transaction/${tid}/pay`,
             null,
             config

@@ -35,8 +35,10 @@ export default function ProductListingPage() {
     }
 
     useEffect(() => {
+        document.title = '所有商品';
         if (searchWord) {
             setSearchKey(searchWord)
+            document.title = `搜索包括'${searchWord}'的商品`;
         }
         console.log(searchWord)
         fetchAllProduct();

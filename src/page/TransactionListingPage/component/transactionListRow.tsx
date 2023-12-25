@@ -69,7 +69,7 @@ export default function TransactionListRow({ result }: Props) {
                             variant="outline-light"
                             className='itemButton buttonMargin'
                             onClick={
-                                () => { navigate(`/checkout/${result.tid}`) }
+                                () => { navigate(`/transaction/${result.tid}`) }
                             }
                         >
                             訂單詳情

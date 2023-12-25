@@ -1,0 +1,79 @@
+.headerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 40vh;
+
+}
+
+.brandBox {
+    padding: 24px;
+    margin-left: 48px;
+    font-size: 2rem;
+}
+
+.sloganBox {
+    font-size: 1.5rem;
+}
+
+.homeAfter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../image/msi.GIF);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    margin: inherit;
+    padding: inherit;
+    min-width: 375px;
+    z-index: 99;
+}
+
+.entryBtn {
+    border-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    font-weight: 600;
+    width: 30vw;
+    font-size: 1.75rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: azure;
+    box-shadow: 0 24px 48px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    transition: 0.6s ease;
+}
+
+.entryBtn:hover {
+    background-color: rgba(255,255,255, 0.7);
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px azure;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.entryBtn:active {
+    background: url(../../image/home1.GIF);
+}
+
+.homeIcon {
+    width: 200px;
+    box-shadow: 0 24px 48px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}

@@ -89,6 +89,7 @@ export default function ShoppingCartPage() {
     }
 
     useEffect(() => {
+        document.title = '我的購物籃';
         if (loginUser) {
             fetchCart();
 

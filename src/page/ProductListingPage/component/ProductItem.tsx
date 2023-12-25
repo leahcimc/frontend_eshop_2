@@ -72,7 +72,7 @@ export default function ProductItem({ productDetail }: Props) {
                             className='itemButton'
                             onClick={
                                 () => {
-                                    navigate(`product/${productDetail.pid}`)
+                                    navigate(`detail/${productDetail.pid}`)
                                 }
                             }
                         >

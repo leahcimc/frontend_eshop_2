@@ -37,7 +37,7 @@ export default function TopNavBar({handleUserInput}: Props) {
         ? (
             handleUserInput(userInput)
         ) : (
-            navigate(`/${userInput}`)
+            navigate(`/product/${userInput}`)
         )
     }
 
@@ -148,24 +148,24 @@ export default function TopNavBar({handleUserInput}: Props) {
                         <Offcanvas.Body>
 
                             <Nav className="justify-content-end flex-grow-1 ">
-                                <Nav.Link href="#action1">主頁</Nav.Link>
-                                <Nav.Link href="#action2">簡介</Nav.Link>
+                                <Nav.Link onClick={() => {navigate('/')}}>主頁</Nav.Link>
+                                <Nav.Link onClick={() => {navigate('/about')}}>關於網頁</Nav.Link>
                                 <NavDropdown
                                     title="所有商品"
                                     id={`offcanvasNavbarDropdown-expand-${expand}`}
-                                    onClick={() => { navigate(`/${''}`) }}
+                                    onClick={() => { navigate(`/product/${''}`) }}
                                 >
-                                    <NavDropdown.Item href="#action3">
+                                    <NavDropdown.Item href='/product/MSI'>
                                         MSI
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item onClick={() => { navigate('/shoppingcart') }}>
+                                    <NavDropdown.Item href='/product/ASUS'>
                                         ASUS
                                     </NavDropdown.Item>
 
                                     <NavDropdown.Divider />
 
-                                    <NavDropdown.Item onClick={() => { navigate('/thankyou') }}>
-                                        Other
+                                    <NavDropdown.Item href={'/product/APPLE'}>
+                                        APPLE
                                     </NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>

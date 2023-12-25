@@ -7,15 +7,20 @@ type Props = {
 }
 
 export default function ItemTable({ productList, searchKey }: Props) {
+
     return (
         <>
             {
-                productList && productList.map &&
                 productList.filter(
                     (productDetail) => productDetail.name.includes(searchKey)
-                ).map(
-                    (productDetail) => <ProductItem productDetail={productDetail} key={productDetail.pid}/> 
-                )
+                ).length === 0
+                    ? (<>沒有相關商品</>
+                    ) : (productList.filter(
+                        (productDetail) => productDetail.name.includes(searchKey)
+                    ).map(
+                        (productDetail) => <ProductItem productDetail={productDetail} key={productDetail.pid} />
+                    )
+                    )
             }
 
         </>

@@ -34,6 +34,7 @@ export default function LoginPage() {
     }
 
     useEffect(() => {
+        document.title = 'Login';
         if (loginUser) {
             navigate("/");
         }
