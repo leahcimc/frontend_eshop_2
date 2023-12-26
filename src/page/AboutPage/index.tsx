@@ -57,6 +57,8 @@ export default function AboutPage() {
                         <p>org.springframework.boot:spring-boot-starter-oauth2-resource-server</p>
                         <p>org.springframework.boot:spring-boot-starter-security</p>
                         <p>org.springframework.boot:spring-boot-starter-web</p>
+                        <p>org.springframework.boot:spring-boot-starter-cache:3.2.1</p>
+                        <p>org.springframework.boot:spring-boot-starter-data-redis:3.2.1</p>
                         <p>com.mysql:mysql-connector-j</p>
                         <br />
 
@@ -76,6 +78,7 @@ export default function AboutPage() {
 
                         <h3>Database</h3>
                         <p>MySQL</p>
+                        <p>Redis</p>
                         <br />
 
                         <h3>Cloud and Deployment</h3>
