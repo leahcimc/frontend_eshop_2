@@ -18,7 +18,7 @@ export default function CheckOutPage() {
     const [result, setResult] = useState<TransactionDto | undefined>(undefined);
     const navigate = useNavigate();
 
-    const handlePay = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const handlePay = () => {
         finishBill(transactionId!);
         navigate("/thankyou");
     }

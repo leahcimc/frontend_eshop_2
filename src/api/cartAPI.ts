@@ -1,10 +1,9 @@
 import axios from "axios";
 import { CartDto } from "../data/dto/CartDto";
 import * as FirebaseAuthService from "../firebase/FirebaseAuthService";
+import getEnvConfig from "../config/EnvConfig";
 
-const baseUrl = 'http://localhost:8080';
-// const baseUrl = 'http://ec2-52-221-215-76.ap-southeast-1.compute.amazonaws.com:8080';
-
+const baseUrl = getEnvConfig().baseUrl;
 
 export const putCartItem = async (pid: number, quantity: number) => {
     try {

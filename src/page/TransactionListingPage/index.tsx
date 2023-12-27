@@ -46,9 +46,12 @@ export default function TransactionListingPage() {
             >
                 {
                     result
-                        ? (
-                            <TransactionListTable data={result} />
-                        ) : (
+                        ? result.length !== 0
+                            ? (
+                                <TransactionListTable data={result} />
+                            ) : (
+                                <div>沒有帳單</div>
+                            ) : (
                             <div><Spinner animation="border" role="status" /></div>
                         )
                 }

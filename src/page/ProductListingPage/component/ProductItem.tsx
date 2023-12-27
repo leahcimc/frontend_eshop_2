@@ -7,9 +7,10 @@ import { NumericFormat } from 'react-number-format';
 
 type Props = {
     productDetail: ProductDto
+    searchKey: string
 }
 
-export default function ProductItem({ productDetail }: Props) {
+export default function ProductItem({ productDetail, searchKey }: Props) {
     const navigate = useNavigate();
 
     return (
@@ -41,14 +42,14 @@ export default function ProductItem({ productDetail }: Props) {
                         {productDetail.name}
                     </Card.Title>
 
-                    <Card.Text 
-                    className='cardText'
-                    style={{
-                        position: 'absolute',
-                        bottom: '8vh',
-                        width: '80%',
-                        fontSize: '1.75rem'
-                    }}
+                    <Card.Text
+                        className='cardText'
+                        style={{
+                            position: 'absolute',
+                            bottom: '8vh',
+                            width: '80%',
+                            fontSize: '1.75rem'
+                        }}
                     >
                         <hr />
                         <span>售價: </span>
@@ -72,7 +73,12 @@ export default function ProductItem({ productDetail }: Props) {
                             className='itemButton'
                             onClick={
                                 () => {
-                                    navigate(`detail/${productDetail.pid}`)
+                                    if (searchKey) {
+                                        navigate(`../product/detail/${productDetail.pid}`)
+                                    } else {
+                                        navigate(`detail/${productDetail.pid}`)
+                                    }
+
                                 }
                             }
                         >

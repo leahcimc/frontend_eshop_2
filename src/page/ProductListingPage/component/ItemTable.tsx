@@ -18,7 +18,7 @@ export default function ItemTable({ productList, searchKey }: Props) {
                     ) : (productList.filter(
                         (productDetail) => productDetail.name.includes(searchKey)
                     ).map(
-                        (productDetail) => <ProductItem productDetail={productDetail} key={productDetail.pid} />
+                        (productDetail) => <ProductItem productDetail={productDetail} searchKey={searchKey} key={productDetail.pid} />
                     )
                     )
             }
