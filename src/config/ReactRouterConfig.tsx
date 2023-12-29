@@ -1,8 +1,8 @@
-import TransactionListingPage from "../page/TransactionListingPage";
+
 import ProductListingPage from "../page/ProductListingPage";
 import ProductDetailPage from "../page/ProductDetailPage";
 import ShoppingCartPage from "../page/ShoppingCartPage";
-import TransactionPage from "../page/TransactionPage";
+
 import ThankYouPage from "../page/ThankYouPage";
 import CheckOutPage from "../page/CheckOutPage";
 import AboutPage from "../page/AboutPage";
@@ -11,6 +11,8 @@ import LoginPage from "../page/LoginPage";
 import HomePage from "../page/HomePage";
 import DemoPage from "../common";
 import { createBrowserRouter } from 'react-router-dom'
+import TransactionPage from "../page/TransactionPage";
+import TransactionListingPage from "../page/TransactionListingPage";
 
 export const router = createBrowserRouter([
     {
