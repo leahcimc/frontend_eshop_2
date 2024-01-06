@@ -2,7 +2,7 @@ import '../../../common/commonStyle.css';
 import { TransactionListDto } from "../../../data/dto/TransactionDto"
 import { NumericFormat } from 'react-number-format';
 import { Row, Col } from "react-bootstrap";
-import * as moment from "moment/moment";
+import moment from "moment/moment";
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -53,7 +53,7 @@ export default function TransactionListRow({ result }: Props) {
                     </Col>
 
                     <Col sm={5} className="d-flex justify-content-center">
-                        {moment(result.datetime).format("YYYY-MM-DD HH:mm:ss")}
+                        {moment(result.datetime).subtract(new Date().getTimezoneOffset(), 'minutes').format("YYYY-MM-DD HH:mm:ss")}
                     </Col>
 
                     <Col sm={2} className="d-flex justify-content-center">

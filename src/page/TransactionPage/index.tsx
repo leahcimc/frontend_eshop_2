@@ -7,14 +7,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { LoginUserContext } from '../../App';
 import { TransactionDto } from '../../data/dto/TransactionDto';
 import { NumericFormat } from 'react-number-format';
-import * as moment from "moment/moment";
+import moment from "moment/moment";
 import * as TransactionApi from '../../api/transactionAPI';
 
 type Params = {
     transactionId: string;
 }
 
-export default function CheckOutPage() {
+export default function TransactionPage() {
     const { transactionId } = useParams<Params>();
     const loginUser = useContext(LoginUserContext);
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function CheckOutPage() {
 
     const calRemainTime = (createTime: Date) => {
         const currentTime = moment();
-        const counterTime = moment(createTime).add(4, 'hour');
+        const counterTime = moment(createTime).subtract(timedifference, 'minutes').add(4, 'hour');
         const remainTime = counterTime.diff(currentTime);
 
         if (remainTime > 0) {
@@ -119,12 +119,17 @@ export default function CheckOutPage() {
 
     }
 
+    //time zone handle
+    const timedifference = new Date().getTimezoneOffset();
+
     const fetch1BillData = async (tid: string) => {
         try {
             const resultData = await TransactionApi.getTransaction(tid);
             setResult(resultData);
+
             calRemainTime(resultData.datetime);
         } catch (e) {
+            console.log(e)
             navigate("/error");
         }
 
@@ -165,7 +170,7 @@ export default function CheckOutPage() {
         }
 
 
-        const timer = setInterval(() => setCountDown((countDown) => countDown-1000), 1000);
+        const timer = setInterval(() => setCountDown((countDown) => countDown - 1000), 1000);
         return () => clearInterval(timer);
 
     }, [loginUser])
@@ -194,7 +199,7 @@ export default function CheckOutPage() {
                                 >
 
                                     <Col>
-                                        交易建立日期: {moment(result.datetime).format("YYYY-MM-DD HH:mm:ss")}
+                                        交易建立日期: {moment(result.datetime).subtract(timedifference, 'minutes').format("YYYY-MM-DD HH:mm:ss")}
                                     </Col>
 
                                     {renderTimer()}

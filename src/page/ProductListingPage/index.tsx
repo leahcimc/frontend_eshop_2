@@ -40,7 +40,7 @@ export default function ProductListingPage() {
             setSearchKey(searchWord)
             document.title = `搜索包括'${searchWord}'的商品`;
         }
-        console.log(searchWord)
+        // console.log(searchWord)
         fetchAllProduct();
     }, [])
 
